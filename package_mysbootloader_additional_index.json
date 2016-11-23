@@ -1,0 +1,46 @@
+{
+  "packages": [
+    {
+      "name": "MYSBootloader",
+      "maintainer": "tetnobic",
+      "websiteURL": "https://github.com/tetnobic/MYSBootloader",
+      "email": "",
+      "help": {
+        "online": "https://github.com/tetnobic/MYSBootloader/wiki"
+      },
+      "platforms": [
+        {
+          "name": "MYSBootloader 1.3pre2",
+          "architecture": "avr",
+          "version": "1.3pre2",
+
+
+
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/tetnobic/MYSBootloader"
+          },
+          "url": "https://github.com/tetnobic/MYSBootloader/releases/download/v6.2/optiboot.zip",
+          "archiveFileName": "optiboot.zip",
+
+
+
+         "checksum": "SHA-256:88d02e100ce2ecec0b1341424815e613746ad3733b37c027a71cd92f7bf0bedb",
+         "size": "10643",
+
+          "boards": [
+            {"name": "MYSBootloader"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        }
+      ],
+      "tools": []
+    }
+  ]
+}
