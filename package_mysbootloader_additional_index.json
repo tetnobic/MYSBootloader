@@ -12,7 +12,7 @@
         {
           "name": "MYSBootloader 1.3pre2",
           "architecture": "avr",
-          "version": "1.3pre2",
+          "version": "1.3",
 
 
 
@@ -20,12 +20,12 @@
           "help": {
             "online": "https://github.com/tetnobic/MYSBootloader"
           },
-          "url": "https://github.com/tetnobic/MYSBootloader/releases/download/v6.2/optiboot.zip",
-          "archiveFileName": "optiboot.zip",
+          "url": "https://github.com/tetnobic/MYSBootloader/releases/download/1.0.0/MYSBootloader.zip",
+          "archiveFileName": "MYSBootloader.zip",
 
 
 
-         "checksum": "SHA-256:88d02e100ce2ecec0b1341424815e613746ad3733b37c027a71cd92f7bf0bedb",
+         "checksum": "SHA-256:c8a1970b3f9eb79697cbd0b96642895de00981e1646b38b8682554160d0203bf",
          "size": "10643",
 
           "boards": [

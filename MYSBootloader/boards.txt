@@ -4,7 +4,7 @@
 # See: http://github.com/Arduino/arduino/
 
 name=[MYSBootloader]
-version=1.3pre2
+version=1.3
 
 ##############################################################
 
@@ -31,7 +31,7 @@ MYSBL13.menu.cpu.16MHzatmega328.upload.speed=115200
 MYSBL13.menu.cpu.16MHzatmega328.bootloader.low_fuses=0xFF
 MYSBL13.menu.cpu.16MHzatmega328.bootloader.high_fuses=0xDA
 MYSBL13.menu.cpu.16MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.16MHzatmega328.bootloader.file=MYSBootloader/MYSBL13pre_atmega328_16Mhz.hex
+MYSBL13.menu.cpu.16MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_16Mhz.hex
 MYSBL13.menu.cpu.16MHzatmega328.build.mcu=atmega328p
 MYSBL13.menu.cpu.16MHzatmega328.build.f_cpu=16000000L
 
@@ -42,7 +42,7 @@ MYSBL13.menu.cpu.8MHzatmega328.upload.speed=38400
 MYSBL13.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xE2
 MYSBL13.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
 MYSBL13.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.8MHzatmega328.bootloader.file=MYSBootloader/MYSBL13pre_atmega328_8Mhz.hex
+MYSBL13.menu.cpu.8MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_8Mhz.hex
 MYSBL13.menu.cpu.8MHzatmega328.build.mcu=atmega328p
 MYSBL13.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
 
@@ -53,7 +53,7 @@ MYSBL13.menu.cpu.1MHzatmega328.upload.speed=9600
 MYSBL13.menu.cpu.1MHzatmega328.bootloader.low_fuses=0x62
 MYSBL13.menu.cpu.1MHzatmega328.bootloader.high_fuses=0xDA
 MYSBL13.menu.cpu.1MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.1MHzatmega328.bootloader.file=MYSBootloader/MYSBL13pre_atmega328_1Mhz.hex
+MYSBL13.menu.cpu.1MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_1Mhz.hex
 MYSBL13.menu.cpu.1MHzatmega328.build.mcu=atmega328p
 MYSBL13.menu.cpu.1MHzatmega328.build.f_cpu=1000000L
 
