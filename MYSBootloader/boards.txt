@@ -6,55 +6,64 @@
 name=[MYSBootloader]
 version=1.3
 
+menu.cpu=Processor
+menu.mhz=CPU Speed
+menu.highfuse=Fuse#High Fuse
+menu.bod=Fuse#Brown Out-Detection
+
 ##############################################################
 
-MYSBL13.name=ATmega328 with MYSBootloader
+MYSBL13.name=MYSBootloader
 
-MYSBL13.upload.tool=avrdude
+MYSBL13.upload.tool=arduino:avrdude
 MYSBL13.upload.protocol=arduino
 
-MYSBL13.bootloader.tool=avrdude
+MYSBL13.build.mcu=atmega328p
+MYSBL13.build.board=AVR_UNO
+MYSBL13.build.core=arduino:arduino
+MYSBL13.build.variant=arduino:standard
+
+MYSBL13.bootloader.tool=arduino:avrdude
 MYSBL13.bootloader.unlock_bits=0x3F
 MYSBL13.bootloader.lock_bits=0x0F
 
-MYSBL13.build.mcu=atmega328p
-MYSBL13.build.board=AVR_PRO
-MYSBL13.build.core=arduino
-MYSBL13.build.variant=standard
+
+MYSBL13.menu.mhz.16MHz=16MHz (ext) 
+MYSBL13.menu.mhz.16MHz.build.f_cpu=16000000L
+MYSBL13.menu.mhz.16MHz.upload.speed=115200
+MYSBL13.menu.mhz.16MHz.bootloader.low_fuses=0xFF
+MYSBL13.menu.mhz.16MHz.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_16Mhz.hex
+
+MYSBL13.menu.mhz.8MHz=8MHz (int) 
+MYSBL13.menu.mhz.8MHz.build.f_cpu=8000000L
+MYSBL13.menu.mhz.8MHz.upload.speed=57600
+MYSBL13.menu.mhz.8MHz.bootloader.low_fuses=0xE2
+MYSBL13.menu.mhz.8MHz.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_8Mhz.hex
+
+MYSBL13.menu.mhz.1MHz=1MHz (int) 
+MYSBL13.menu.mhz.1MHz.build.f_cpu=1000000L
+MYSBL13.menu.mhz.1MHz.upload.speed=9600
+MYSBL13.menu.mhz.1MHz.bootloader.low_fuses=0x62
+MYSBL13.menu.mhz.1MHz.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_1Mhz.hex
+
+
+MYSBL13.menu.highfuse.default=Default
+MYSBL13.menu.highfuse.default.bootloader.high_fuses=0xDA
+MYSBL13.menu.highfuse.eeprom=Preserve EEPROM
+MYSBL13.menu.highfuse.eeprom.bootloader.high_fuses=0xD2
+
+MYSBL13.menu.bod.dis=Disabled
+MYSBL13.menu.bod.dis.bootloader.extended_fuses=0x07
+MYSBL13.menu.bod.1v8=VCC 1.8v
+MYSBL13.menu.bod.1v8.bootloader.extended_fuses=0x06
+
+
 
 ## Arduino with MYSBootloader 1.3pre
 ## -------------------------------------------------
-MYSBL13.menu.cpu.16MHzatmega328=ATmega328 16MHz (XTAL, BOD1V8)
-MYSBL13.menu.cpu.16MHzatmega328.upload.maximum_size=30720
-MYSBL13.menu.cpu.16MHzatmega328.upload.maximum_data_size=2048
-MYSBL13.menu.cpu.16MHzatmega328.upload.speed=115200
-MYSBL13.menu.cpu.16MHzatmega328.bootloader.low_fuses=0xFF
-MYSBL13.menu.cpu.16MHzatmega328.bootloader.high_fuses=0xDA
-MYSBL13.menu.cpu.16MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.16MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_16Mhz.hex
-MYSBL13.menu.cpu.16MHzatmega328.build.mcu=atmega328p
-MYSBL13.menu.cpu.16MHzatmega328.build.f_cpu=16000000L
-
-MYSBL13.menu.cpu.8MHzatmega328=ATmega328 8MHz (RC, BOD1V8)
-MYSBL13.menu.cpu.8MHzatmega328.upload.maximum_size=30720
-MYSBL13.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
-MYSBL13.menu.cpu.8MHzatmega328.upload.speed=38400
-MYSBL13.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xE2
-MYSBL13.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
-MYSBL13.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.8MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_8Mhz.hex
-MYSBL13.menu.cpu.8MHzatmega328.build.mcu=atmega328p
-MYSBL13.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
-
-MYSBL13.menu.cpu.1MHzatmega328=ATmega328 1MHz (RC/8, BOD1V8)
-MYSBL13.menu.cpu.1MHzatmega328.upload.maximum_size=30720
-MYSBL13.menu.cpu.1MHzatmega328.upload.maximum_data_size=2048
-MYSBL13.menu.cpu.1MHzatmega328.upload.speed=9600
-MYSBL13.menu.cpu.1MHzatmega328.bootloader.low_fuses=0x62
-MYSBL13.menu.cpu.1MHzatmega328.bootloader.high_fuses=0xDA
-MYSBL13.menu.cpu.1MHzatmega328.bootloader.extended_fuses=0x06
-MYSBL13.menu.cpu.1MHzatmega328.bootloader.file=mysbootloaders/MYSBL13pre_atmega328_1Mhz.hex
-MYSBL13.menu.cpu.1MHzatmega328.build.mcu=atmega328p
-MYSBL13.menu.cpu.1MHzatmega328.build.f_cpu=1000000L
+MYSBL13.menu.cpu.atmega328p=ATmega328p
+MYSBL13.menu.cpu.atmega328p.upload.maximum_size=30720
+MYSBL13.menu.cpu.atmega328p.upload.maximum_data_size=2048
+MYSBL13.menu.cpu.atmega328p.build.mcu=atmega328p
 
 ##############################################################
